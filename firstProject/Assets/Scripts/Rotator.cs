@@ -4,16 +4,16 @@ using UnityEngine;
 
 
 public class Rotator : MonoBehaviour
-{
+{   //this will be what is passed to the Sinus and CoSinus functions, as a function of time and speed. (To make sure we call it the apropriate amount of times per second);
     float timeC = 0f;
     [SerializeField]
-    float speed;
+    float speed; //actual speed of rotation, which along with timeC will influence the wave frequency of the Trigo functions.
     [SerializeField]
-    float height;
+    float height = 1; //how high (y axis) we want the object to rotate
+    float width = 1; // how wide (x axis) we want the object to rotate
     [SerializeField]
-    float width;
-    
-    Vector3 startingPos;
+    float depth = 0; //how deep(z) we want the object to rotate, will set it to 0 to make it seem like a 2D rotation.
+    Vector3 startingPos; //starting position, for easy referencing.
 
 
 
@@ -25,10 +25,10 @@ public class Rotator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeC += Time.deltaTime * speed;
-        float x = Mathf.Cos(timeC) * width; 
-        float y = Mathf.Sin(timeC) * height;
-        float z = 10f;  
-        transform.position = new Vector3(x, y, z) + startingPos;
+        timeC += Time.deltaTime * speed; //as discussed above
+        float x = Mathf.Cos(timeC) * width; //this will influence the x value of the object
+        float y = Mathf.Sin(timeC) * height; //this will influence the y value of the object
+        
+        transform.position = new Vector3(x, y, depth) + startingPos;//apply change
     }
 }   

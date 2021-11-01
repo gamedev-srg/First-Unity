@@ -917,7 +917,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997745639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.5, z: 0}
+  m_LocalPosition: {x: 0, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1175118750}
@@ -938,7 +938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   height: 3
-  width: 3
+  depth: 0
 --- !u!1 &1175118747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,8 +1221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleRate: 0.008
-  maxScale: 2.5
-  minScale: 0.2
+  maxScaleX: 2
+  minScaleX: 0.2
 --- !u!1 &1364393541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,7 +1237,7 @@ GameObject:
   - component: {fileID: 1364393542}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
